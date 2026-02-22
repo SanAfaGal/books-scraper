@@ -1,0 +1,14 @@
+services:
+  app:
+    # Este es el nombre que tendrá la imagen en el sistema del usuario
+    image: books-scraper:latest
+    build: .
+    container_name: books_scraper_container
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data/output:/app/data/output
+      - ./data/logs:/app/data/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
