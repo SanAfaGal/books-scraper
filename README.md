@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 3. **Correr la aplicación:**
 ```bash
-streamlit run app.py
+py -m streamlit run app.py
 ```
 
 
